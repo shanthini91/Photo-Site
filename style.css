@@ -102,16 +102,23 @@ header {
   margin: auto;
 }
 
-.fromLeft {
+.mission-title {
   animation-name: fromLeft;
   animation-duration: 3s;
 }
 
-.fromRight {
+.mission-content {
   animation-name: fromRight;
   animation-duration: 3s;
 }
-
+.camera-img{
+  animation-name: fromLeft;
+  animation-duration: 3s;
+}
+.mission-text{
+  animation-name: fromRight;
+  animation-duration: 3s;
+}
 @keyframes fromLeft {
   0% {
     transform: translateX(-120px);
@@ -208,18 +215,22 @@ header {
   transform: translateY(-2px);
 }
 
-.moveFromLeft {
+.card-1 {
   animation-name: moveFromLeft;
   animation-duration: 2s;
 }
-.moveFromRight {
+.card-3 {
   animation-name: moveFromRight;
   animation-duration: 2s;
 }
-.moveFromBottom {
+.card-2{
   animation-name: moveFromBottom;
   animation-duration: 2s;
 }
+.card-shadow {
+  animation-name: moveFromBottom;
+  animation-duration: 2s;
+
 
 @keyframes moveFromLeft {
   0% {
