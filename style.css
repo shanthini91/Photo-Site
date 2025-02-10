@@ -38,22 +38,9 @@ header {
   transition: all .4s;
 }
 
-.change .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.change .line2 {
-  opacity: 0;
-}
-
-.change .line3 {
-  transform: rotate(45deg) translate(-5px, -6px);
-}
-
 .custom-navbar {
   padding: 5px 30px;
   background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7));
-  height:50px;
 }
 
 /* end of navbar */
@@ -174,6 +161,10 @@ header {
 
 .active-item {
   color: #70aed2;
+}
+
+.gallery-list-item:hover{
+  color: #70aed2; 
 }
 /* end of gallery */
 
