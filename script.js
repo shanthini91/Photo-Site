@@ -1,19 +1,27 @@
 $(document).ready(function() {
+  // Navbar burger animation
   $('.nav-button').click(function() {
-    $('.nav-button').toggleClass('change');
+    $(this).toggleClass('change');
   });
 
+  // Auto close navbar on link click (mobile)
+  $('.nav-link').click(function() {
+    $('.navbar-collapse').collapse('hide');
+    $('.nav-button').removeClass('change'); // reset burger animation
+  });
+
+  // Single scroll event for all animations
   $(window).scroll(function() {
     let position = $(this).scrollTop();
+
+    // Navbar background change
     if(position >= 200) {
       $('.nav-menu').addClass('custom-navbar');
     } else {
       $('.nav-menu').removeClass('custom-navbar');
     }
-  });
 
-  $(window).scroll(function() {
-    let position = $(this).scrollTop();
+    // Mission image & text animation
     if(position >= 650) {
       $('.camera-img').addClass('fromLeft');
       $('.mission-text').addClass('fromRight');
@@ -21,10 +29,8 @@ $(document).ready(function() {
       $('.camera-img').removeClass('fromLeft');
       $('.mission-text').removeClass('fromRight');
     }
-  });
 
-  $(window).scroll(function() {
-    let position = $(this).scrollTop();
+    // Mission title & content
     if(position >= 500) {
       $('.mission-title').addClass('fromLeft');
       $('.mission-content').addClass('fromRight');
@@ -32,34 +38,15 @@ $(document).ready(function() {
       $('.mission-title').removeClass('fromLeft');
       $('.mission-content').removeClass('fromRight');
     }
-  });
 
-  $(window).scroll(function() {
-    let position = $(this).scrollTop();
+    // Collection cards animation
     if(position >= 700) {
       $('.card-shadow').addClass('moveFromBottom');
     } else {
       $('.card-shadow').removeClass('moveFromBottom');
     }
-  });
 
-
-  $('.gallery-list-item').click(function() {
-    let value = $(this).attr('data-filter');
-    if(value === 'all') {
-      $('.filter').show(300);
-    } else {
-      $('.filter').not('.' + value).hide(300);
-      $('.filter').filter('.' + value).show(300);
-    }
-  });
-
-  $('.gallery-list-item').click(function() {
-    $(this).addClass('active-item').siblings().removeClass('active-item');
-  });
-
-  $(window).scroll(function() {
-    let position = $(this).scrollTop();
+    // Pricing cards animation
     if(position >= 4300) {
       $('.card-1').addClass('moveFromLeft');
       $('.card-2').addClass('moveFromBottom');
@@ -70,35 +57,18 @@ $(document).ready(function() {
       $('.card-3').removeClass('moveFromRight');
     }
   });
+
+  // Gallery filter
+  $('.gallery-list-item').click(function() {
+    let value = $(this).attr('data-filter');
+    if(value === 'all') {
+      $('.filter').show(300);
+    } else {
+      $('.filter').not('.' + value).hide(300);
+      $('.filter').filter('.' + value).show(300);
+    }
+
+    // Active filter highlight
+    $(this).addClass('active-item').siblings().removeClass('active-item');
+  });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
