@@ -9,6 +9,12 @@ $(document).ready(function() {
     $('.navbar-collapse').collapse('hide');
     $('.nav-button').removeClass('change'); // reset burger animation
   });
+$('a[href^="#"]').click(function(e) {
+  e.preventDefault();
+  $('html, body').animate({
+    scrollTop: $($(this).attr('href')).offset().top - 70
+  }, 600);
+});
 
   // Single scroll event for all animations
   $(window).scroll(function() {
@@ -72,3 +78,4 @@ $(document).ready(function() {
     $(this).addClass('active-item').siblings().removeClass('active-item');
   });
 });
+
