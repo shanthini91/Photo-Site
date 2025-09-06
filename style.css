@@ -54,6 +54,10 @@ header {
   padding: 5px 30px;
   background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7));
 }
+#gallery .filter {
+  flex: 1 1 250px;
+  margin: 10px;
+}
 
 /* end of navbar */
 
@@ -329,6 +333,7 @@ header {
   text-decoration: none;
 }
 /* end of footer */
+
 
 
 
